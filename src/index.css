@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* 
+padding-x: 4 (px-4)
+padding-y: 2 (py-2)
+margin-> NO!
+border
+rounded-lg
+ring->anillo externo
+outline->delineado
+shadow-md -> shadow-lg
+
+texto:
+        poppins para general
+        serif para resalte
+          titulos 3xl
+          subtitulos lg
+          aclaraciones xs
+
+NO ABUSAR DE:
+            LOS GRADIENTES
+            IMAGENES DE FONDO
+
+
+*/
+
+@theme {
+  --color-customWhite: #fff;
+  --color-customRed: #bf0411;
+  --color-customBlack: #000000;
+  --color-customGray: #f06a6a;
+  --color-customLigth-blue: #37a5dd;
+  --color-customDark-blue: #166193;
+  --color-customSoft-blue: #8fd8fd;
+  --font-poppins: "Poppins", "Sans"
+}
