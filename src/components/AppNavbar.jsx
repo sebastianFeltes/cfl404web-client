@@ -2,7 +2,7 @@ import NavLink from "./ui/NavLink";
 
 function AppNavbar() {
   return (
-    <nav>
+    <nav className="font-poppins w-full h-16 flex justify-between border">
       <NavLink path={"/admin"}>
         <>
           <svg

@@ -3,10 +3,9 @@ import AppNavbar from "../components/AppNavbar"
 
 function AppLayout() {
   return (
-    <div>
+    <div className="h-screen w-screen">
       <AppNavbar/>
-      <p>Interno</p>
-        <Outlet/>
+      <Outlet/>
     </div>
   )
 }

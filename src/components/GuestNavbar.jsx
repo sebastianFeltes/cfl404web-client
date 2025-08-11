@@ -2,7 +2,7 @@ import NavLink from "./ui/NavLink";
 
 function GuestNavbar() {
   return (
-    <nav className="font-poppins">
+    <nav className="font-poppins w-full h-16 flex justify-between border">
       <NavLink path={"/"}>
         <>
           <svg

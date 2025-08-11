@@ -3,9 +3,8 @@ import GuestNavbar from "../components/GuestNavbar"
 
 function GuestLayout() {
   return (
-    <div>
+    <div className="w-screen h-screen">
         <GuestNavbar/>
-        <p>Invitado</p>
         <Outlet/>
     </div>
   )
