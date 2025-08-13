@@ -3,7 +3,7 @@ import GuestNavbar from "../components/GuestNavbar"
 
 function GuestLayout() {
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen flex flex-col">
         <GuestNavbar/>
         <Outlet/>
     </div>
