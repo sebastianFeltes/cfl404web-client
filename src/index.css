@@ -26,11 +26,11 @@ NO ABUSAR DE:
 
 @theme {
   --color-customWhite: #fff;
-  --color-customRed: #bf04116a;
-  --color-customBlack: #0000006a;
-  --color-customGray: #f06a6a;
-  --color-customLigth-blue: #37a5dd6a;
-  --color-customDark-blue: #1661936a;
-  --color-customSoft-blue: #8fd8fd6a;
+  --color-customRed: #bf0411;
+  --color-customBlack: #000000;
+  --color-customGray: #6a6a6a;
+  --color-customLigth-blue: #37a5dd;
+  --color-customDark-blue: #166193;
+  --color-customSoft-blue: #8fd8fd;
   --font-poppins: "Poppins", "Sans"
 }
