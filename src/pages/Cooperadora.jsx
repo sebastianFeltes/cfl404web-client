@@ -1,12 +1,13 @@
 function Cooperadora() {
   return (
     <div className="h-full w-full flex flex-col justify-evenly gap-8 pb-8">
+     {/* <img src="https://images.pexels.com/photos/3184397/pexels-photo-3184397.jpeg" alt="imagen de fondo">*/}
       <h2 className="text-3xl text-white font-poppins font-medium p-2 text-center bg-customDark-blue">
         COOPERADORA CFL 404 BERISSO
       </h2>
 
       <div className="flex h-1/3 px-8 bg-white">
-        <p className="font-poppins border p-2 rounded-lg">
+        <p className="font-poppins  shadow-lg shadow-customSoft-blue p-2 rounded-lg">
           Nuestra Asociación Cooperadora ¿Sabías que el Centro de Formación
           Laboral N.º 404 de Berisso cuenta con una Asociación Cooperadora? Esta
           cooperadora está oficialmente reconocida por la Dirección de
@@ -24,7 +25,7 @@ function Cooperadora() {
       </div>
 
       <div className="px-8 h-1/2 flex justify-between gap-8">
-        <div className="border p-2 rounded-lg w-1/2 bg-white">
+        <div className="border shadow-lg shadow-customSoft-blue p-2 rounded-lg w-1/2 bg-white">
           <p className="font-poppins">
             ¿Queres colaborar? Podes hacerlo con la siguiente información: Banco
             Provincia de Buenos Aires ALIAS: coop.cfl.404 CBU:
@@ -35,7 +36,7 @@ function Cooperadora() {
         </div>
 
         {/* Se armó maquetado DIV para agregar Memorias */}
-        <div className="border p-2 rounded-lg  w-1/2 bg-white">
+        <div className="border shadow-lg shadow-customSoft-blue p-2 rounded-lg  w-1/2 bg-white">
           ESPACIO RESERVADO PARA MEMORIAS
           <p className="font-poppins">
             Memorias de Nuestro Camino A lo largo de los años, el Centro de
