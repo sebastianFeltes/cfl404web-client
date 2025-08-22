@@ -1,13 +1,15 @@
 function Cooperadora() {
   return (
-    <div className="h-full w-full flex flex-col justify-evenly gap-8 pb-8 bg-[url(´https://images.pexels.com/photos/3184397/pexels-photo-3184397.jpeg´)] bg-cover bg-center">
-      {/* <img src="https://images.pexels.com/photos/3184397/pexels-photo-3184397.jpeg" alt="imagen de fondo">*/}
-      <h2 className="text-3xl text-white font-poppins font-medium p-2 text-center bg-customDark-blue">
+    <div className="h-full w-full flex flex-col justify-evenly gap-8 pb-8 relative">
+      <img className="h-screen w-screen object-cover absolute top-0 left-0"  src="https://images.pexels.com/photos/3184397/pexels-photo-3184397.jpeg" alt="imagen de fondo"/>
+      <div className="w-screen h-screen absolute z-0 top-0 left-0 bg-gradient-to-l from-white/40 to-white/10"></div>
+
+      <h2 className="relative z-10 text-3xl text-white font-poppins font-medium p-2 text-center bg-customDark-blue">
         COOPERADORA CFL 404 BERISSO
       </h2>
 
-      <div className="flex h-1/3 px-8">
-        <p className="font-poppins  shadow-lg shadow-customGray p-2 rounded-lg">
+      <div className="flex h-1/3 px-8 relative z-10">
+        <p className="font-poppins p-4 shadow-lg shadow-customGray rounded-lg bg-white/40 backdrop-blur-lg text-justify">
           Nuestra Asociación Cooperadora ¿Sabías que el Centro de Formación
           Laboral N.º 404 de Berisso cuenta con una Asociación Cooperadora? Esta
           cooperadora está oficialmente reconocida por la Dirección de
@@ -24,8 +26,8 @@ function Cooperadora() {
         </p>
       </div>
 
-      <div className="px-8 h-1/2 flex justify-between gap-8">
-        <div className="border shadow-lg  shadow-customGray p-2 rounded-lg w-1/2 bg-white text-center">
+      <div className="px-8 h-1/2 flex justify-between gap-8 relative z-10">
+        <div className="border shadow-lg  shadow-customGray p-2 rounded-lg w-1/2 bg-white/40 backdrop-blur-lg text-left">
           <p className="font-poppins">
             ¿Queres colaborar? Podes hacerlo con la siguiente información:
           </p>
@@ -40,9 +42,9 @@ function Cooperadora() {
         </div>
 
         {/* Se armó maquetado DIV para agregar Memorias */}
-        <div className="border shadow-lg  shadow-customGray p-2 rounded-lg  w-1/2 bg-white">
+        <div className="border shadow-lg  shadow-customGray p-2 rounded-lg  w-1/2 bg-white/40 backdrop-blur-lg text-left">
           ESPACIO RESERVADO PARA MEMORIAS
-          <p className="font-poppins">
+          <p className="font-poppins p-4">
             Memorias de Nuestro Camino A lo largo de los años, el Centro de
             Formación Laboral N.º 404 de Berisso ha sido escenario de
             innumerables proyectos, logros y momentos compartidos. Este espacio
