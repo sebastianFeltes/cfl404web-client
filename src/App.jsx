@@ -13,6 +13,7 @@ import Contacto from "./pages/Contacto";
 import Cooperadora from "./pages/Cooperadora";
 import Institucional from "./pages/Institucional";
 import Beneficios from "./pages/Beneficios";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
           <Route element={<Dashboard />} />
           <Route path="perfil" element={<Perfil />} />
           <Route path="inscripcion" element={<Inscripcion />} />
+          <Route path="usuarios" element={<Users />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

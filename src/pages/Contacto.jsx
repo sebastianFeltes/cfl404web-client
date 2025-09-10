@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 function Contacto() {
   const socialIcons = [
     {
@@ -28,6 +30,15 @@ function Contacto() {
 
   const iconClasses = "spin-self-hover transform w-16";
 
+  {/*const [users, setUsers] = useState("");
+  useEffect(() => {
+    async function fetchUsers() {
+      const res = await getUsers();
+      return setUsers(res);
+    }
+    fetchUsers();
+  }, []);
+  */}
   return (
     <div className="w-full h-full flex flex-col bg-customWhite items-center justify-start py-2">
       <style>
@@ -43,7 +54,11 @@ function Contacto() {
           }
         `}
       </style>
-
+    <div>
+      <p>
+        {users?.respuesta || 'No hay usuarios'}
+      </p>
+    </div>
       <h1 className="font-extrabold font-serif text-customDark-blue text-3xl py-2">
         ¡Dónde encontrarnos!
       </h1>
