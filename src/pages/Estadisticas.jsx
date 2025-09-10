@@ -1,13 +1,26 @@
+import { useEffect, useState } from "react";
 import GraficoAsistencias from "../components/GraficoAsistencias";
 import GraficoEgresados from "../components/GraficoEgresados";
 import GraficosHistoricos from "../components/GraficosHistoricos";
 import Graficos from "./Graficos";
+import { getAttendancesStats } from "../services/stats.services";
 
 function Estadisticas() {
+  const [stats, setStats] = useState('');
+
+  useEffect(() => {
+    async function fetchstats() {
+      const res = await getAttendancesStats();
+      return setStats(res.attendances);
+    }
+    fetchstats();
+  }, []);
+
   return (
-    <div className="h-full w-full">
+ 
+   <div className="h-full w-full">
       <h1 className="px-4 py-4 font-poppins text-3xl bg-customDark-blue text-white">
-        Estadisticas
+        Estadisticas {stats?.respuesta}
       </h1>
       <div className="flex flex-row gap-4 justify-center border  rounded-lg px-2 py-2 font-poppins bg-customSoft-blue">
         <ul>
@@ -47,8 +60,8 @@ function Estadisticas() {
           </li>
         </ul>
       </div>
-      <Graficos/>
-      <GraficosHistoricos/>
+      <Graficos />
+      <GraficosHistoricos />
       <GraficoAsistencias />
       <GraficoEgresados />
     </div>
