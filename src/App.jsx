@@ -13,7 +13,6 @@ import Contacto from "./pages/Contacto";
 import Cooperadora from "./pages/Cooperadora";
 import Institucional from "./pages/Institucional";
 import Beneficios from "./pages/Beneficios";
-import { useEffect } from "react";
 import Attendance from "./pages/Attendance";
 import Docentes from "./pages/Docentes";
 
