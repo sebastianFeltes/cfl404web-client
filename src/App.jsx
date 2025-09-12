@@ -13,6 +13,8 @@ import Contacto from "./pages/Contacto";
 import Cooperadora from "./pages/Cooperadora";
 import Institucional from "./pages/Institucional";
 import Beneficios from "./pages/Beneficios";
+import { useEffect } from "react";
+import Attendance from "./pages/Attendance";
 import Docentes from "./pages/Docentes";
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
           <Route element={<Dashboard />} />
           <Route path="perfil" element={<Perfil />} />
           <Route path="inscripcion" element={<Inscripcion />} />
+          <Route path="asistencia" element={<Attendance />} />
           <Route path="docentes" element={<Docentes/>} />
         </Route>
       </Routes>

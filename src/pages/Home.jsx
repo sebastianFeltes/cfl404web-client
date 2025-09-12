@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
 import imagen from "../assets/fotofondo.jpg";
 import logo from "../assets/logo_cfl404.svg";
+import { getRoles } from "../services/auth.services";
 
 function Home() {
+  const [roles, setRoles] = useState("");
+  useEffect(() => {
+    async function fetchRoles() {
+      const res = await getRoles();
+      return setRoles(res);
+    }
+    fetchRoles();
+  }, []);
   return (
     <div className="flex flex-row h-full w-full  ">
       <img
@@ -23,15 +33,15 @@ function Home() {
       </div>
 
       <div className="w-1/2 text-customDark-blue text-4xl flex flex-col justify-center items-center font-sans">
-        <p >
-          <span className="text-shadow-lg font-semibold">EDUCACION  </span>
-           para el presente.
+        <p>
+          <span className="text-shadow-lg font-semibold">EDUCACION <p>{roles?.respuesta}</p> </span>
+          para el presente.
           {/* <span className="text-shadow-lg">  PRESENTE</span> */}
         </p>
-        <p >
+        <p>
           {/* <span className="text-shadow-lg">TRABAJO  </span> */}
-           Trabajo para el
-          <span className="text-shadow-lg font-semibold">  FUTURO.</span>
+          Trabajo para el
+          <span className="text-shadow-lg font-semibold"> FUTURO.</span>
         </p>
       </div>
     </div>
