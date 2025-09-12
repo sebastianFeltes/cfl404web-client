@@ -1,3 +1,4 @@
+
 const BASE_URL = 'HTTP://localhost:4000';
 
 export async function getAllUsers () {
