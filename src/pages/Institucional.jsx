@@ -3,5 +3,5 @@ function Institucional() {
     <div>Institucional</div>
   )
 }
-
+//  historia/mision/vision
 export default Institucional

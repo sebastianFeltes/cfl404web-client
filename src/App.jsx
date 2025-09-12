@@ -29,7 +29,7 @@ function App() {
           <Route path="estadisticas" element={<Estadisticas />} />
         </Route>
         <Route path="admin" element={<AppLayout />}>
-          <Route element={<Dashboard />} />
+          <Route index element={<Dashboard />} />
           <Route path="perfil" element={<Perfil />} />
           <Route path="inscripcion" element={<Inscripcion />} />
         </Route>
