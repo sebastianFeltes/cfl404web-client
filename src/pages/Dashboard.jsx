@@ -3,6 +3,7 @@ import { getStudentsResumes } from "../services/resumes.services";
 
 function Dashboard() {
   const [students, setStudents] = useState(0);
+  
   useEffect(() => {
     async function fetchStudents() {
       const data = await getStudentsResumes();
