@@ -36,7 +36,6 @@ function App() {
           <Route path="perfil" element={<Perfil />} />
           <Route path="inscripcion" element={<Inscripcion />} />
           <Route path="usuarios" element={<Users />} />
-
           <Route path="asistencia" element={<Attendance />} />
           <Route path="docentes" element={<Docentes/>} />
         </Route>
