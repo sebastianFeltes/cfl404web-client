@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 function Contacto() {
   const socialIcons = [
     {
@@ -26,11 +28,17 @@ function Contacto() {
   const spanClasses =
     'w-20 h-20 flex items-center justify-center spin-container py-2';
 
-  const iconClasses = 'spin-self-hover transform w-16';
+  const iconClasses = "spin-self-hover transform w-16";
 
-  const buttonClasses =
-    'text-center font-semibold text-lg border border-customSoft-blue bg-customDark-blue hover:bg-customLigth-blue text-white px-4 py-2 rounded-lg transition-colors duration-300 no-underline w-64';
-
+  {/*const [users, setUsers] = useState("");
+  useEffect(() => {
+    async function fetchUsers() {
+      const res = await getUsers();
+      return setUsers(res);
+    }
+    fetchUsers();
+  }, []);
+  */}
   return (
     <div className="w-full h-full flex flex-col bg-customWhite items-center">
       <style>
@@ -46,12 +54,10 @@ function Contacto() {
           }
         `}
       </style>
-      <h2 className="w-full text-3xl text-white font-poppins font-medium p-2 text-center bg-customDark-blue ">
-        CONTACTO
-      </h2>
-      {/*<h1 className="font-extrabold font-serif text-customDark-blue text-3xl py-2">
+
+      <h1 className="font-extrabold font-serif text-customDark-blue text-3xl py-2">
         ¡Dónde encontrarnos!
-      </h1>*/}
+      </h1>
 
       <div className="flex flex-col w-3xl h-full py-2 gap-4">
         {socialIcons.map(({ icon, hoverBorder, title, link }, index) => (

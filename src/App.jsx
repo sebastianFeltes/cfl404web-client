@@ -13,6 +13,7 @@ import Contacto from "./pages/Contacto";
 import Cooperadora from "./pages/Cooperadora";
 import Institucional from "./pages/Institucional";
 import Beneficios from "./pages/Beneficios";
+import Users from "./pages/Users";
 import Attendance from "./pages/Attendance";
 import Docentes from "./pages/Docentes";
 
@@ -34,6 +35,8 @@ function App() {
           <Route element={<Dashboard />} />
           <Route path="perfil" element={<Perfil />} />
           <Route path="inscripcion" element={<Inscripcion />} />
+          <Route path="usuarios" element={<Users />} />
+
           <Route path="asistencia" element={<Attendance />} />
           <Route path="docentes" element={<Docentes/>} />
         </Route>
