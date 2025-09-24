@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllAttendance } from "../services/attendance.services";
+import CursoCard from "../components/CursoCard";
 
 function Attendances() {
   const [attendances, setAttendances] = useState([]);
@@ -24,8 +25,8 @@ function Attendances() {
         <tbody className="text-black">
           {attendances?.map((attendance) => (
             <tr className="h-10 text-center border-b border-customDark-blue" key={attendance.id}>
-              <td>{attendance.courseStudentId}</td>
-              <td>{attendance.courseStudentId}</td>
+              <td>{attendance?.courseStudent?.student?.lastName} {attendance?.courseStudent?.student?.firstName}</td>
+              <td>{attendance?.courseStudent?.course?.name}</td>
               <td>{attendance.hour}</td>
               <td>{attendance.date}</td>
               <td>{attendance.codeId}</td>
@@ -33,6 +34,7 @@ function Attendances() {
           ))}
         </tbody>
       </table>
+      <CursoCard title={"Programacion Web"} href={"https://www.pexels.com/es-es/foto/ordenador-portatil-negro-y-gris-546819/"} />
     </div>
   );
 }
