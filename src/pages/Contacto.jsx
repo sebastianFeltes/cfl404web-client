@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 function Contacto() {
   const socialIcons = [
     {
@@ -29,6 +27,8 @@ function Contacto() {
     'w-20 h-20 flex items-center justify-center spin-container py-2';
 
   const iconClasses = "spin-self-hover transform w-16";
+
+  const buttonClasses = 'w-20 h-20 flex items-center justify-center spin-container py-2';
 
   {/*const [users, setUsers] = useState("");
   useEffect(() => {
