@@ -13,7 +13,7 @@ export async function getStudentsStats() {
 }
 
 export async function getCoursesStats() {
-  const response = await fetch(`${BASE_URL}/stats/cources`);
+  const response = await fetch(`${BASE_URL}/stats/courses`);
   const data = await response.json();
   return data;
 }
