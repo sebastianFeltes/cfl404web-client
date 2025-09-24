@@ -1,9 +1,44 @@
+import { useEffect, useState } from "react";
 import GraficoAsistencias from "../components/GraficoAsistencias";
 import GraficoEgresados from "../components/GraficoEgresados";
 import GraficosHistoricos from "../components/GraficosHistoricos";
 import Graficos from "./Graficos";
+import {
+  getAttendancesStats,
+  getCoursesStats,
+  getStaffsStats,
+  getStudentsStats,
+} from "../services/stats.services";
 
 function Estadisticas() {
+  const [attendanceStats, setAttendanceStats] = useState(0);
+  const [studentsStats, setStudentsStats] = useState(0);
+  const [coursesStats, setCoursestats] = useState(0);
+  const [staffsStats, setStaffsStats] = useState(0);
+
+  useEffect(() => {
+    async function fetchAttendanceStats() {
+      const res = await getAttendancesStats();
+      return setAttendanceStats(res.data);
+    }
+    async function fetchStudentsStats() {
+      const res = await getStudentsStats();
+      return setStudentsStats(res.data);
+    }
+    async function fetchCoursesStats() {
+      const res = await getCoursesStats();
+      return setCoursestats(res.data);
+    }
+    async function fetchStaffsStats() {
+      const res = await getStaffsStats();
+      return setStaffsStats(res.data);
+    }
+    fetchStaffsStats();
+    fetchCoursesStats();
+    fetchStudentsStats();
+    fetchAttendanceStats()
+  }, []);
+
   return (
     <div className="h-full w-full">
       <h1 className="px-4 py-4 font-poppins text-3xl bg-customDark-blue text-white">
@@ -47,10 +82,11 @@ function Estadisticas() {
           </li>
         </ul>
       </div>
-      <Graficos/>
-      <GraficosHistoricos/>
+      <div>cantidad de alumnos: {studentsStats}</div>
+     {/*  <Graficos />
+      <GraficosHistoricos />
       <GraficoAsistencias />
-      <GraficoEgresados />
+      <GraficoEgresados /> */}
     </div>
   );
 }
