@@ -7,6 +7,7 @@ function Users() {
   useEffect(() => {
     async function fetchUsers() {
       const res = await getAllUsers();
+      console.log(res.users)
       setUsers(res.users);
     }
     fetchUsers();
@@ -21,24 +22,23 @@ function Users() {
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Email</th>
-            <th>Rol ID</th>
+            <th>Rol</th>
             <th>Estado</th>
           </tr>
         </thead>
 
-        <tbody>{users?.map((user)=>(
+        <tbody>
+          {users?.map((user) => (
             <tr className="h-10 text-center border-b border-customLigth-blue">
-                <td>{user?.username}</td>
-                <td>{user?.firstName}</td>
-                <td>{user?.lastName}</td>
-                <td>{user?.email}</td>
-                <td>{user?.roleId}</td>
-                <td>{user?.statusId}</td>
-                
+              <td>{user?.username}</td>
+              <td>{user?.firstName}</td>
+              <td>{user?.lastName}</td>
+              <td>{user?.email}</td>
+              <td>{user?.role?.name}</td>
+              <td>{user?.status?.name}</td>
             </tr>
-        ))
-            
-            }</tbody>
+          ))}
+        </tbody>
       </table>
     </div>
   );

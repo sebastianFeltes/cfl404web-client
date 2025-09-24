@@ -59,7 +59,7 @@ function Contacto() {
         ¡Dónde encontrarnos!
       </h1>
 
-      <div className="flex flex-col w-3xl h-full py-2 gap-4">
+      <div className="flex justify-center items-center gap-4">
         {socialIcons.map(({ icon, hoverBorder, title, link }, index) => (
           <div key={index} className="flex justify-center items-center gap-4">
             {/* Contenedor del icono */}
@@ -74,7 +74,7 @@ function Contacto() {
             </a>
 
             {/* Botón separado */}
-            <a href={link} target="_blank" className={buttonClasses}>
+            <a href={link} target="_blank">
               {title}
             </a>
           </div>
