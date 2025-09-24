@@ -32,7 +32,7 @@ function Cursos() {
       </h2>
 
       <table className="w-full border-2 border-customDark-blue">
-        <thead className="bg-customDark-blue text-white">
+        <thead className="bg-customLigth-blue text-white">
           <th>Curso</th>
           <th>Docente</th>
           <th>Fecha Inicio</th>

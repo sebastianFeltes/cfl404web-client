@@ -4,8 +4,8 @@ function Cooperadora() {
 
 
   return (
-    <div className="h-full w-full flex flex-col justify-evenly gap-8 pb-8 relative">
-      <img className="h-screen w-screen object-cover absolute top-0 left-0"  src="https://images.pexels.com/photos/3184397/pexels-photo-3184397.jpeg" alt="imagen de fondo"/>
+    <div className="h-full w-full flex flex-col justify-evenly gap-8 pb-8 relative overflow-hidden">
+      <img className="h-screen w-screen object-cover absolute top-0 left-0"  src="https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg" alt="imagen de fondo"/>
       <div className="w-screen h-screen absolute z-0 top-0 left-0 bg-gradient-to-l from-white/40 to-white/10"></div>
 
 
