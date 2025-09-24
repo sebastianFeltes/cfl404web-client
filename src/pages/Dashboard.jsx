@@ -6,13 +6,13 @@ function Dashboard() {
   
   useEffect(() => {
     async function fetchStudents() {
-      const data = await getStudentsResumes();
-      setStudents(data.students);
+      const res = await getStudentsResumes();
+      setStudents(res.data);
     }
     fetchStudents();
   }, []);
 
-  return <div></div>;
+  return <>Dashboard cantidad de estudiantes:{students}</>;
 }
 
 export default Dashboard;
