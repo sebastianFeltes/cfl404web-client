@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { getAllUsers } from "../services/users.services";
+import { useNavigate } from "react-router";
 
 function Users() {
   const [users, setUsers] = useState([]);
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     async function fetchUsers() {
       const res = await getAllUsers();
-      console.log(res.users)
       setUsers(res.users);
     }
     fetchUsers();
@@ -29,7 +31,7 @@ function Users() {
 
         <tbody>
           {users?.map((user) => (
-            <tr className="h-10 text-center border-b border-customLigth-blue">
+            <tr onClick={()=>navigate(`/admin/usuario/${user.id}`)} key={user.id} className="h-10 text-center border-b border-customLigth-blue hover:bg-customDark-blue/50 cursor-pointer">
               <td>{user?.username}</td>
               <td>{user?.firstName}</td>
               <td>{user?.lastName}</td>

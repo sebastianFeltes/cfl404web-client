@@ -16,6 +16,7 @@ import Beneficios from "./pages/Beneficios";
 import Users from "./pages/Users";
 import Attendance from "./pages/Attendance";
 import Docentes from "./pages/Docentes";
+import UserPage from "./pages/UserPage";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="perfil" element={<Perfil />} />
           <Route path="inscripcion" element={<Inscripcion />} />
           <Route path="usuarios" element={<Users />} />
+          <Route path="usuario/:id" element={<UserPage/>}/>
           <Route path="asistencia" element={<Attendance />} />
           <Route path="docentes" element={<Docentes/>} />
         </Route>
